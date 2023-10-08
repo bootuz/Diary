@@ -28,7 +28,6 @@
 		C06516892AC47AB90049C3BD /* AsuncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06516882AC47AB90049C3BD /* AsuncButton.swift */; };
 		C098DCA62AC035220014F857 /* DiaryAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C098DCA52AC035220014F857 /* DiaryAppApp.swift */; };
 		C098DCA82AC035220014F857 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C098DCA72AC035220014F857 /* MainView.swift */; };
-		C098DCAA2AC035220014F857 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = C098DCA92AC035220014F857 /* Item.swift */; };
 		C098DCAC2AC035230014F857 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C098DCAB2AC035230014F857 /* Assets.xcassets */; };
 		C098DCAF2AC035230014F857 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C098DCAE2AC035230014F857 /* Preview Assets.xcassets */; };
 		C098DCB92AC035230014F857 /* DiaryAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C098DCB82AC035230014F857 /* DiaryAppTests.swift */; };
@@ -90,7 +89,6 @@
 		C098DCA22AC035220014F857 /* DiaryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiaryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C098DCA52AC035220014F857 /* DiaryAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryAppApp.swift; sourceTree = "<group>"; };
 		C098DCA72AC035220014F857 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		C098DCA92AC035220014F857 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		C098DCAB2AC035230014F857 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C098DCAE2AC035230014F857 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C098DCB42AC035230014F857 /* DiaryAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiaryAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,7 +221,6 @@
 				C098DCD12AC0355A0014F857 /* Views */,
 				C098DCA52AC035220014F857 /* DiaryAppApp.swift */,
 				C098DCA72AC035220014F857 /* MainView.swift */,
-				C098DCA92AC035220014F857 /* Item.swift */,
 				C098DCAB2AC035230014F857 /* Assets.xcassets */,
 				C098DCAD2AC035230014F857 /* Preview Content */,
 			);
@@ -443,7 +440,6 @@
 				C098DCA82AC035220014F857 /* MainView.swift in Sources */,
 				C05187022AC0CAFF00B6FDF6 /* AuthToken.swift in Sources */,
 				C098DCD82AC03CBC0014F857 /* ResetPassword.swift in Sources */,
-				C098DCAA2AC035220014F857 /* Item.swift in Sources */,
 				C04DD4C82AC96ABA00BC6D05 /* SignInViewModel.swift in Sources */,
 				C0F7F3542AD1DE8F0025C56E /* ResetPasswordInitService.swift in Sources */,
 				C06516812AC472710049C3BD /* RegistrationView.swift in Sources */,

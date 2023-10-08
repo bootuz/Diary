@@ -18,8 +18,6 @@ struct AccountDTO: Codable {
     let role: Role
     let birthdate: String?
     let avatars: [String]?
-
-    
 }
 
 struct Role: Codable {
