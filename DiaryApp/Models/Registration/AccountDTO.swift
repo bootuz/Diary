@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct AccountDTO: Codable {
     let id: Int64
     let email: String

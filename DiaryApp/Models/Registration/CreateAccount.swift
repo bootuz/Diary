@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct CreateAccount: Codable {
     let email: String
     let nickname: String
