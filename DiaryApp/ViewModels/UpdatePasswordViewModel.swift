@@ -29,11 +29,12 @@ class UpdatePasswordViewModel {
         else { return false }
         return true
     }
-
+    
+    @MainActor
     func updatePassword() async {
         let resetPassword = UpdatePassword(codeFromEmail: codeFromEmail, newPassword: newPassword)
         do {
-            let response = try await service.updatePassword(data: resetPassword)
+            let _ = try await service.updatePassword(data: resetPassword)
         } catch {
             errorMessage = error.localizedDescription
             showErrorMessage = true

@@ -13,7 +13,7 @@
 		C04DD4C82AC96ABA00BC6D05 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04DD4C72AC96ABA00BC6D05 /* SignInViewModel.swift */; };
 		C04DD4CA2AC9A79800BC6D05 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04DD4C92AC9A79800BC6D05 /* Response.swift */; };
 		C04DD4D12AC9DCB200BC6D05 /* ResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04DD4D02AC9DCB200BC6D05 /* ResponseMapper.swift */; };
-		C04DD4D32AC9DE6000BC6D05 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04DD4D22AC9DE6000BC6D05 /* Authentication.swift */; };
+		C04DD4D32AC9DE6000BC6D05 /* TokenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04DD4D22AC9DE6000BC6D05 /* TokenService.swift */; };
 		C04DD4D62AC9E08000BC6D05 /* BearerAuthDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04DD4D52AC9E08000BC6D05 /* BearerAuthDecorator.swift */; };
 		C04DD4D82AC9E0AA00BC6D05 /* BasicAuthDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04DD4D72AC9E0AA00BC6D05 /* BasicAuthDecorator.swift */; };
 		C04DD4DC2AC9EF8200BC6D05 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04DD4DB2AC9EF8200BC6D05 /* CodeView.swift */; };
@@ -73,7 +73,7 @@
 		C04DD4C72AC96ABA00BC6D05 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		C04DD4C92AC9A79800BC6D05 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		C04DD4D02AC9DCB200BC6D05 /* ResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseMapper.swift; sourceTree = "<group>"; };
-		C04DD4D22AC9DE6000BC6D05 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		C04DD4D22AC9DE6000BC6D05 /* TokenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenService.swift; sourceTree = "<group>"; };
 		C04DD4D52AC9E08000BC6D05 /* BearerAuthDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearerAuthDecorator.swift; sourceTree = "<group>"; };
 		C04DD4D72AC9E0AA00BC6D05 /* BasicAuthDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAuthDecorator.swift; sourceTree = "<group>"; };
 		C04DD4DB2AC9EF8200BC6D05 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
@@ -238,6 +238,7 @@
 		C098DCB72AC035230014F857 /* DiaryAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				C0F024CC2AD2F62C00C4CC22 /* TestData */,
 				C098DCB82AC035230014F857 /* DiaryAppTests.swift */,
 			);
 			path = DiaryAppTests;
@@ -280,7 +281,7 @@
 				C04DD4D42AC9E06200BC6D05 /* AuthDecorators */,
 				C051870C2AC0CFF600B6FDF6 /* Endpoints */,
 				C098DCD42AC03B110014F857 /* RegistrationService.swift */,
-				C04DD4D22AC9DE6000BC6D05 /* Authentication.swift */,
+				C04DD4D22AC9DE6000BC6D05 /* TokenService.swift */,
 				C0F7F3532AD1DE8F0025C56E /* ResetPasswordInitService.swift */,
 				C0F7F3572AD1E8E50025C56E /* UpdatePasswordService.swift */,
 			);
@@ -296,6 +297,13 @@
 				C098DCDD2AC0890C0014F857 /* AccountDTO.swift */,
 			);
 			path = Registration;
+			sourceTree = "<group>";
+		};
+		C0F024CC2AD2F62C00C4CC22 /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TestData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -450,7 +458,7 @@
 				C098DCDC2AC03D940014F857 /* ChangePassword.swift in Sources */,
 				C0269A7C2AC2F3E500E315C6 /* RegistrationRequest.swift in Sources */,
 				C04DD4D12AC9DCB200BC6D05 /* ResponseMapper.swift in Sources */,
-				C04DD4D32AC9DE6000BC6D05 /* Authentication.swift in Sources */,
+				C04DD4D32AC9DE6000BC6D05 /* TokenService.swift in Sources */,
 				C0F7F3562AD1DF290025C56E /* ResetPasswordRequest.swift in Sources */,
 				C05187092AC0CF0100B6FDF6 /* RequestError.swift in Sources */,
 				C04DD4C62AC9689500BC6D05 /* SignInView.swift in Sources */,

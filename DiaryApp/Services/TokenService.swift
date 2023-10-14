@@ -15,7 +15,7 @@ protocol TokenProvider {
     func removeToken()
 }
 
-class Authentication: TokenProvider {
+class TokenService: TokenProvider {
 
     private let client: HTTPClient
 

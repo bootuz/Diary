@@ -34,7 +34,8 @@ class ResetPasswordInitViewModel: Validator {
         }
         return true
     }
-
+    
+    @MainActor
     func resetPasswordInit() async {
         do {
             let _ = try await service.resetPasswordInit(email: email)

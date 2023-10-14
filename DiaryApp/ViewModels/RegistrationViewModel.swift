@@ -39,16 +39,17 @@ class RegistrationViewModel: Validator {
         self.service = service
     }
 
+    @MainActor
     func crateAccount() async {
         let account = CreateAccount(email: self.email, nickname: self.nickname, password: self.password)
         do {
             let _ = try await service.createAccount(data: account)
         } catch {
             errorMessage = error.localizedDescription
-            isAlertPresented.toggle()
         }
     }
-
+    
+    @MainActor
     func isEmailAvailable() async -> Bool {
         do {
             let response = try await service.checkEmail(email: email)
@@ -63,7 +64,8 @@ class RegistrationViewModel: Validator {
             return false
         }
     }
-
+    
+    @MainActor
     func isNicknameAvailable() async -> Bool {
         do {
             let response = try await service.checkNickname(nickName: nickname)
@@ -78,7 +80,7 @@ class RegistrationViewModel: Validator {
             return false
         }
     }
-
+    
     func validateForms() -> Bool {
         guard !email.isEmpty,
               !nickname.isEmpty,

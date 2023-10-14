@@ -66,15 +66,9 @@ struct RegistrationView: View {
                 Text("Create account")
                     .frame(maxWidth: .infinity, maxHeight: 40)
             }, isPerformingTask: $viewModel.isPerformingRequest)
-            .navigationDestination(isPresented: $showCodeView, destination: {
+            .navigationDestination(isPresented: $showCodeView) {
                 CodeView()
-//                    .navigationBarBackButtonHidden(true)
-            })
-            .alert("Error", isPresented: $viewModel.isAlertPresented, actions: {
-                Button("OK", role: .cancel) { }
-            }, message: {
-                Text(viewModel.errorMessage)
-            })
+            }
             .buttonStyle(.borderedProminent)
             .padding(.top)
 

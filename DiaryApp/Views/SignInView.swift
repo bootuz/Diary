@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignInView: View {
-    @Bindable private var viewModel = SignInViewModel(service: Authentication(client: BasicAuthDecorator(client: URLSession.shared)))
+    @Bindable private var viewModel = SignInViewModel(service: TokenService(client: BasicAuthDecorator(client: URLSession.shared)))
 
     @State private var isResetPasswordSheetPresented: Bool = false
 
@@ -63,11 +63,6 @@ struct SignInView: View {
                     Text("Sign in")
                         .frame(maxWidth: .infinity, maxHeight: 40)
                 }, isPerformingTask: $viewModel.isPerformingRequest)
-                .alert("Error", isPresented: .constant(false), actions: {
-                    Button("OK", role: .cancel) { }
-                }, message: {
-                    Text("test")
-                })
                 .buttonStyle(.borderedProminent)
                 .padding(.top)
 

@@ -38,7 +38,8 @@ class SignInViewModel: Validator {
         }
         return true
     }
-
+    
+    @MainActor
     func fetchToken(username: String, password: String) async {
         do {
             let response = try await service.fetchToken(with: AuthCreds(username: username, password: password))

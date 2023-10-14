@@ -31,7 +31,6 @@ struct UpdatePasswordView: View {
                 LabeledTextField(title: "New password", text: $viewModel.newPassword, type: .password) {
                     Image(systemName: "lock")
                 }
-                .keyboardType(.numberPad)
                 .onChange(of: viewModel.codeFromEmail) {
                     viewModel.showErrorMessage = false
                 }
