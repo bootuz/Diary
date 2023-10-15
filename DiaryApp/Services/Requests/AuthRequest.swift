@@ -69,7 +69,7 @@ extension AuthRequest: Request {
             urlComponents.host = host
             urlComponents.path = path
 
-            if let query = query {
+            if let query {
                 urlComponents.queryItems = query
             }
 
@@ -83,9 +83,8 @@ extension AuthRequest: Request {
             header?.forEach({ key, value in
                 request.setValue(value, forHTTPHeaderField: key)
             })
-            print("DEBUG: URL - \(url)")
-
-            if let body = body {
+            print("DEBUG: [\(method.rawValue)] \(url)")
+            if let query {
                 request.httpBody = urlComponents.query?.data(using: .utf8)
             }
             return request

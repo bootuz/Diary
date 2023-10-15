@@ -160,14 +160,14 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		C051870C2AC0CFF600B6FDF6 /* Endpoints */ = {
+		C051870C2AC0CFF600B6FDF6 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
 				C051870D2AC0D00100B6FDF6 /* AuthRequest.swift */,
 				C0269A7B2AC2F3E500E315C6 /* RegistrationRequest.swift */,
 				C0F7F3552AD1DF290025C56E /* ResetPasswordRequest.swift */,
 			);
-			path = Endpoints;
+			path = Requests;
 			sourceTree = "<group>";
 		};
 		C06516822AC474E30049C3BD /* ViewModels */ = {
@@ -279,7 +279,7 @@
 			children = (
 				C05187032AC0CE8D00B6FDF6 /* Base */,
 				C04DD4D42AC9E06200BC6D05 /* AuthDecorators */,
-				C051870C2AC0CFF600B6FDF6 /* Endpoints */,
+				C051870C2AC0CFF600B6FDF6 /* Requests */,
 				C098DCD42AC03B110014F857 /* RegistrationService.swift */,
 				C04DD4D22AC9DE6000BC6D05 /* TokenService.swift */,
 				C0F7F3532AD1DE8F0025C56E /* ResetPasswordInitService.swift */,
