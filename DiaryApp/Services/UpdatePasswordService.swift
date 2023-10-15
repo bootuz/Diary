@@ -8,7 +8,7 @@
 import Foundation
 
 protocol UpdatePasswordProtocol {
-    func updatePassword(data: UpdatePassword) async throws -> Response<String>
+    func updatePassword(data: UpdatePasswordDTO) async throws -> Response<String>
 }
 
 class UpdatePasswordService: UpdatePasswordProtocol {
@@ -19,7 +19,7 @@ class UpdatePasswordService: UpdatePasswordProtocol {
         self.client = client
     }
 
-    func updatePassword(data: UpdatePassword) async throws -> Response<String> {
+    func updatePassword(data: UpdatePasswordDTO) async throws -> Response<String> {
         let (data, response) = try await client.perform(request: ResetPasswordRequest.resetPassword(data: data).makeRequest)
         return try ResetPasswordMapper.map(data: data, response: response)
     }

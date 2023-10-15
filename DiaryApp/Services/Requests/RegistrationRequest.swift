@@ -9,8 +9,8 @@ import Foundation
 
 
 enum RegistrationRequest {
-    case createAccount(data: CreateAccount)
-    case changePassword(data: ChangePassword)
+    case createAccount(data: CreateAccountDTO)
+    case changePassword(data: ChangePasswordDTO)
     case checkNickname(nickName: String)
     case activateAccount(code: String)
     case checkEmail(email: String)

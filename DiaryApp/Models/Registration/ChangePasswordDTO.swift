@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ChangePassword: Codable {
+struct ChangePasswordDTO: Codable {
     let accountId: Int
     let oldPassword: String
     let newPassword: String

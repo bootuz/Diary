@@ -29,7 +29,6 @@ class RegistrationViewModel: Validator {
     var nickname: String = ""
     var email: String = ""
     var password: String = ""
-    var isAlertPresented: Bool = false
     var errorMessage: String = ""
     var isPerformingRequest: Bool = false
 
@@ -41,7 +40,7 @@ class RegistrationViewModel: Validator {
 
     @MainActor
     func crateAccount() async {
-        let account = CreateAccount(email: self.email, nickname: self.nickname, password: self.password)
+        let account = CreateAccountDTO(email: self.email, nickname: self.nickname, password: self.password)
         do {
             let _ = try await service.createAccount(data: account)
         } catch {

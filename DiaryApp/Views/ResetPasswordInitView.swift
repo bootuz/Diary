@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ResetPasswordInitView: View {
     @Binding var isResetPasswordSheetPresented: Bool
-    @Bindable private var viewModel = ResetPasswordInitViewModel(service: ResetPasswordInitService(client: URLSession.shared))
+    @State private var viewModel = ResetPasswordInitViewModel(service: ResetPasswordInitService(client: URLSession.shared))
 
     var body: some View {
         NavigationStack() {

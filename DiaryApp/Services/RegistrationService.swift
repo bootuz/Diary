@@ -8,7 +8,7 @@
 import Foundation
 
 protocol RegistrationProtocol {
-    func createAccount(data: CreateAccount) async throws -> Response<AccountDTO>
+    func createAccount(data: CreateAccountDTO) async throws -> Response<AccountDTO>
     func checkNickname(nickName: String) async throws -> Response<Bool>
     func activateAccount(code: String) async throws -> Response<String>
     func checkEmail(email: String) async throws -> Response<Bool>
@@ -23,7 +23,7 @@ class RegistrationService: RegistrationProtocol {
         self.client = client
     }
 
-    func createAccount(data: CreateAccount) async throws -> Response<AccountDTO> {
+    func createAccount(data: CreateAccountDTO) async throws -> Response<AccountDTO> {
         let (data, response) = try await client.perform(request: RegistrationRequest.createAccount(data: data).makeRequest)
         return try ResponseMapper.map(data: data, response: response)
     }

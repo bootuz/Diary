@@ -32,7 +32,7 @@ class UpdatePasswordViewModel {
     
     @MainActor
     func updatePassword() async {
-        let resetPassword = UpdatePassword(codeFromEmail: codeFromEmail, newPassword: newPassword)
+        let resetPassword = UpdatePasswordDTO(codeFromEmail: codeFromEmail, newPassword: newPassword)
         do {
             let _ = try await service.updatePassword(data: resetPassword)
         } catch {

@@ -34,9 +34,9 @@
 		C098DCC32AC035230014F857 /* DiaryAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C098DCC22AC035230014F857 /* DiaryAppUITests.swift */; };
 		C098DCC52AC035230014F857 /* DiaryAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C098DCC42AC035230014F857 /* DiaryAppUITestsLaunchTests.swift */; };
 		C098DCD52AC03B110014F857 /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C098DCD42AC03B110014F857 /* RegistrationService.swift */; };
-		C098DCD82AC03CBC0014F857 /* UpdatePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = C098DCD72AC03CBC0014F857 /* UpdatePassword.swift */; };
-		C098DCDA2AC03D110014F857 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = C098DCD92AC03D110014F857 /* CreateAccount.swift */; };
-		C098DCDC2AC03D940014F857 /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = C098DCDB2AC03D940014F857 /* ChangePassword.swift */; };
+		C098DCD82AC03CBC0014F857 /* UpdatePasswordDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C098DCD72AC03CBC0014F857 /* UpdatePasswordDTO.swift */; };
+		C098DCDA2AC03D110014F857 /* CreateAccountDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C098DCD92AC03D110014F857 /* CreateAccountDTO.swift */; };
+		C098DCDC2AC03D940014F857 /* ChangePasswordDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C098DCDB2AC03D940014F857 /* ChangePasswordDTO.swift */; };
 		C098DCDE2AC0890C0014F857 /* AccountDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C098DCDD2AC0890C0014F857 /* AccountDTO.swift */; };
 		C0F7F34A2AD168120025C56E /* ErrorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F7F3492AD168120025C56E /* ErrorLabel.swift */; };
 		C0F7F3502AD1DDE50025C56E /* ResetPasswordInitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F7F34F2AD1DDE50025C56E /* ResetPasswordInitView.swift */; };
@@ -97,9 +97,9 @@
 		C098DCC22AC035230014F857 /* DiaryAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryAppUITests.swift; sourceTree = "<group>"; };
 		C098DCC42AC035230014F857 /* DiaryAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C098DCD42AC03B110014F857 /* RegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
-		C098DCD72AC03CBC0014F857 /* UpdatePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePassword.swift; sourceTree = "<group>"; };
-		C098DCD92AC03D110014F857 /* CreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
-		C098DCDB2AC03D940014F857 /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
+		C098DCD72AC03CBC0014F857 /* UpdatePasswordDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordDTO.swift; sourceTree = "<group>"; };
+		C098DCD92AC03D110014F857 /* CreateAccountDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountDTO.swift; sourceTree = "<group>"; };
+		C098DCDB2AC03D940014F857 /* ChangePasswordDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordDTO.swift; sourceTree = "<group>"; };
 		C098DCDD2AC0890C0014F857 /* AccountDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDTO.swift; sourceTree = "<group>"; };
 		C0F7F3492AD168120025C56E /* ErrorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLabel.swift; sourceTree = "<group>"; };
 		C0F7F34F2AD1DDE50025C56E /* ResetPasswordInitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordInitView.swift; sourceTree = "<group>"; };
@@ -291,9 +291,9 @@
 		C098DCD62AC03B3C0014F857 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
-				C098DCD72AC03CBC0014F857 /* UpdatePassword.swift */,
-				C098DCD92AC03D110014F857 /* CreateAccount.swift */,
-				C098DCDB2AC03D940014F857 /* ChangePassword.swift */,
+				C098DCD72AC03CBC0014F857 /* UpdatePasswordDTO.swift */,
+				C098DCD92AC03D110014F857 /* CreateAccountDTO.swift */,
+				C098DCDB2AC03D940014F857 /* ChangePasswordDTO.swift */,
 				C098DCDD2AC0890C0014F857 /* AccountDTO.swift */,
 			);
 			path = Registration;
@@ -441,13 +441,13 @@
 				C0F7F3582AD1E8E50025C56E /* UpdatePasswordService.swift in Sources */,
 				C098DCD52AC03B110014F857 /* RegistrationService.swift in Sources */,
 				C06516842AC475030049C3BD /* RegistrationViewModel.swift in Sources */,
-				C098DCDA2AC03D110014F857 /* CreateAccount.swift in Sources */,
+				C098DCDA2AC03D110014F857 /* CreateAccountDTO.swift in Sources */,
 				C051870B2AC0CF3F00B6FDF6 /* HTTPClient.swift in Sources */,
 				C0F7F3522AD1DE670025C56E /* ResetPasswordInitViewModel.swift in Sources */,
 				C0F7F35A2AD1E9960025C56E /* UpdatePasswordViewModel.swift in Sources */,
 				C098DCA82AC035220014F857 /* MainView.swift in Sources */,
 				C05187022AC0CAFF00B6FDF6 /* AuthToken.swift in Sources */,
-				C098DCD82AC03CBC0014F857 /* UpdatePassword.swift in Sources */,
+				C098DCD82AC03CBC0014F857 /* UpdatePasswordDTO.swift in Sources */,
 				C04DD4C82AC96ABA00BC6D05 /* SignInViewModel.swift in Sources */,
 				C0F7F3542AD1DE8F0025C56E /* ResetPasswordInitService.swift in Sources */,
 				C06516812AC472710049C3BD /* RegistrationView.swift in Sources */,
@@ -455,7 +455,7 @@
 				C04DD4D62AC9E08000BC6D05 /* BearerAuthDecorator.swift in Sources */,
 				C0F7F35C2AD1EA4A0025C56E /* UpdatePasswordView.swift in Sources */,
 				C051870E2AC0D00100B6FDF6 /* AuthRequest.swift in Sources */,
-				C098DCDC2AC03D940014F857 /* ChangePassword.swift in Sources */,
+				C098DCDC2AC03D940014F857 /* ChangePasswordDTO.swift in Sources */,
 				C0269A7C2AC2F3E500E315C6 /* RegistrationRequest.swift in Sources */,
 				C04DD4D12AC9DCB200BC6D05 /* ResponseMapper.swift in Sources */,
 				C04DD4D32AC9DE6000BC6D05 /* TokenService.swift in Sources */,

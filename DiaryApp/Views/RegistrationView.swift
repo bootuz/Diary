@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct RegistrationView: View {
-    @Bindable private var viewModel = RegistrationViewModel(service: RegistrationService(client: URLSession.shared))
+    @State private var viewModel = RegistrationViewModel(service: RegistrationService(client: URLSession.shared))
     @State private var showErrorMessage: Bool = false
     @State private var showCodeView: Bool = false
     @Environment(\.dismiss) private var dismiss

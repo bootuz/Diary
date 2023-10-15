@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UpdatePassword: Codable {
+struct UpdatePasswordDTO: Codable {
     let codeFromEmail: String
     let newPassword: String
 }

@@ -9,8 +9,8 @@ import SwiftUI
 
 struct UpdatePasswordView: View {
     @Binding var isResetPasswordSheetPresented: Bool
-    @Bindable private var viewModel = UpdatePasswordViewModel(service: UpdatePasswordService(client: URLSession.shared))
-    
+    @State private var viewModel = UpdatePasswordViewModel(service: UpdatePasswordService(client: URLSession.shared))
+
     var body: some View {
         VStack {
             VStack {

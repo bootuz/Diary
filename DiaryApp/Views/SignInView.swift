@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignInView: View {
-    @Bindable private var viewModel = SignInViewModel(service: TokenService(client: BasicAuthDecorator(client: URLSession.shared)))
+    @State private var viewModel = SignInViewModel(service: TokenService(client: BasicAuthDecorator(client: URLSession.shared)))
 
     @State private var isResetPasswordSheetPresented: Bool = false
 
