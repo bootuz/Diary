@@ -9,6 +9,7 @@ import Foundation
 
 
 struct Constants {
+    static let basePath = "/api/v0/sign-up"
     static let tokenKey = "TOKEN_DATA"
 
     struct ErrorMessages {

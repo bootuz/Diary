@@ -14,13 +14,12 @@ enum ResetPasswordRequest {
 }
 
 extension ResetPasswordRequest: Request {
-    private static let basePath = "/api/v0/sign-up"
     var path: String {
         switch self {
         case .resetPasswordInit:
-            return "\(ResetPasswordRequest.basePath)/open/reset-password/init"
+            return "\(Constants.basePath)/open/reset-password/init"
         case .resetPassword:
-            return "\(ResetPasswordRequest.basePath)/open/reset-password"
+            return "\(Constants.basePath)/open/reset-password"
         }
     }
     

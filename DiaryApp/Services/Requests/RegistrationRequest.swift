@@ -18,19 +18,18 @@ enum RegistrationRequest {
 
 extension RegistrationRequest: Request {
 
-    private static let basePath: String = "/api/v0/sign-up"
     var path: String {
         switch self {
             case .createAccount:
-                return "\(RegistrationRequest.basePath)/open/create"
+                return "\(Constants.basePath)/open/create"
             case .changePassword:
-                return "\(RegistrationRequest.basePath)/changePassword"
+                return "\(Constants.basePath)/changePassword"
             case .checkNickname:
-                return "\(RegistrationRequest.basePath)/open/checkNickname"
+                return "\(Constants.basePath)/open/checkNickname"
             case .activateAccount(let code):
-                return "\(RegistrationRequest.basePath)/open/activate/\(code)"
+                return "\(Constants.basePath)/open/activate/\(code)"
             case .checkEmail:
-                return "\(RegistrationRequest.basePath)/open/checkEmail"
+                return "\(Constants.basePath)/open/checkEmail"
 
         }
     }
