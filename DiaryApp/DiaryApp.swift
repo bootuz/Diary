@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import Observation
+
 
 @main
 struct DiaryApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            SignInView()
+            MainView()
         }
     }
 }

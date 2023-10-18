@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 class BasicAuthDecorator: HTTPClient {
     let client: HTTPClient
 
@@ -16,8 +17,8 @@ class BasicAuthDecorator: HTTPClient {
 
     func perform(request: URLRequest) async throws -> (Data, HTTPURLResponse) {
         var newRequest = request
-        let authData = ("client:secret").data(using: .utf8)!.base64EncodedString()
-        newRequest.addValue("Basic \(authData)", forHTTPHeaderField: "Authorization")
+        let authData = ("client:secret").data(using: .utf8)?.base64EncodedString()
+        newRequest.addValue("Basic \(authData ?? "")", forHTTPHeaderField: "Authorization")
         return try await client.perform(request: newRequest)
     }
 }

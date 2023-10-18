@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 enum ResetPasswordRequest {
     case resetPasswordInit(email: String)
     case resetPassword(data: UpdatePasswordDTO)

@@ -20,7 +20,7 @@ class UpdatePasswordService: UpdatePasswordProtocol {
     }
 
     func updatePassword(data: UpdatePasswordDTO) async throws -> Response<String> {
-        let (data, response) = try await client.perform(request: ResetPasswordRequest.resetPassword(data: data).makeRequest)
+        let (data, response) = try await client.perform(request: ResetPasswordRequest.resetPassword(data: data).urlRequest)
         return try ResetPasswordMapper.map(data: data, response: response)
     }
 }

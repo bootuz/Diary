@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 class BearerAuthDecorator: HTTPClient {
     let client: HTTPClient
     let tokenProvider: TokenProvider

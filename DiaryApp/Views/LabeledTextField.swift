@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 enum TextFieldType {
     case regular
     case password

@@ -11,7 +11,7 @@ struct CreateAccountDTO: Codable {
     let email: String
     let nickname: String
     let password: String
-    var name: String? = nil
-    var birthdate: String? = nil
-    var about: String? = nil
+    var name: String?
+    var birthdate: String?
+    var about: String?
 }

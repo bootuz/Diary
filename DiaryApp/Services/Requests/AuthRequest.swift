@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 enum AuthRequest {
     case fetchToken(creds: AuthCreds)
     case refreshToken(refreshCreds: RefreshCreds)
@@ -62,7 +63,7 @@ extension AuthRequest: Request {
         }
     }
 
-    var makeRequest: URLRequest {
+    var urlRequest: URLRequest {
         get throws {
             var urlComponents = URLComponents()
             urlComponents.scheme = scheme
@@ -80,10 +81,7 @@ extension AuthRequest: Request {
             var request = URLRequest(url: url)
             request.httpMethod = method.rawValue
             request.timeoutInterval = 20
-            header?.forEach({ key, value in
-                request.setValue(value, forHTTPHeaderField: key)
-            })
-            print("DEBUG: [\(method.rawValue)] \(url)")
+            header?.forEach { request.setValue($1, forHTTPHeaderField: $0) }
             request.httpBody = urlComponents.query?.data(using: .utf8)
             return request
         }

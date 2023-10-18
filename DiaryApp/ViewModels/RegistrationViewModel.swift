@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import SwiftUI
+
 
 protocol Validator {
     var email: String { get set }

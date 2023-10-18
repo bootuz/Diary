@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 struct AuthToken: Codable {
     let accessToken: String
     let refreshToken: String
@@ -33,4 +34,3 @@ struct AuthToken: Codable {
         return !isTokenDateExpired(timeInterval: expiresIn)
     }
 }
-

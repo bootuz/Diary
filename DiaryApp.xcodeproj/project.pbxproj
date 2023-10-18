@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C01758B52AC6034D00342159 /* LabeledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01758B42AC6034D00342159 /* LabeledTextField.swift */; };
 		C0269A7C2AC2F3E500E315C6 /* RegistrationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0269A7B2AC2F3E500E315C6 /* RegistrationRequest.swift */; };
+		C0481DB12AE013A90024435B /* AppStateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0481DB02AE013A90024435B /* AppStateViewModel.swift */; };
+		C0481DB32AE018550024435B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0481DB22AE018550024435B /* Constants.swift */; };
 		C04DD4C62AC9689500BC6D05 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04DD4C52AC9689500BC6D05 /* SignInView.swift */; };
 		C04DD4C82AC96ABA00BC6D05 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04DD4C72AC96ABA00BC6D05 /* SignInViewModel.swift */; };
 		C04DD4CA2AC9A79800BC6D05 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04DD4C92AC9A79800BC6D05 /* Response.swift */; };
@@ -71,6 +73,8 @@
 /* Begin PBXFileReference section */
 		C01758B42AC6034D00342159 /* LabeledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledTextField.swift; sourceTree = "<group>"; };
 		C0269A7B2AC2F3E500E315C6 /* RegistrationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRequest.swift; sourceTree = "<group>"; };
+		C0481DB02AE013A90024435B /* AppStateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateViewModel.swift; sourceTree = "<group>"; };
+		C0481DB22AE018550024435B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C04DD4C52AC9689500BC6D05 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		C04DD4C72AC96ABA00BC6D05 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		C04DD4C92AC9A79800BC6D05 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 				C0F7F3512AD1DE670025C56E /* ResetPasswordInitViewModel.swift */,
 				C0F7F3592AD1E9960025C56E /* UpdatePasswordViewModel.swift */,
 				C0F024CF2ADD206D00C4CC22 /* ActivateAccountViewModel.swift */,
+				C0481DB02AE013A90024435B /* AppStateViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 				C098DCD12AC0355A0014F857 /* Views */,
 				C098DCA52AC035220014F857 /* DiaryApp.swift */,
 				C098DCA72AC035220014F857 /* MainView.swift */,
+				C0481DB22AE018550024435B /* Constants.swift */,
 				C098DCAB2AC035230014F857 /* Assets.xcassets */,
 				C098DCAD2AC035230014F857 /* Preview Content */,
 			);
@@ -444,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C04DD4D82AC9E0AA00BC6D05 /* BasicAuthDecorator.swift in Sources */,
+				C0481DB32AE018550024435B /* Constants.swift in Sources */,
 				C0F7F3582AD1E8E50025C56E /* UpdatePasswordService.swift in Sources */,
 				C098DCD52AC03B110014F857 /* RegistrationService.swift in Sources */,
 				C0F024D02ADD206D00C4CC22 /* ActivateAccountViewModel.swift in Sources */,
@@ -461,6 +468,7 @@
 				C098DCA62AC035220014F857 /* DiaryApp.swift in Sources */,
 				C04DD4D62AC9E08000BC6D05 /* BearerAuthDecorator.swift in Sources */,
 				C0F7F35C2AD1EA4A0025C56E /* UpdatePasswordView.swift in Sources */,
+				C0481DB12AE013A90024435B /* AppStateViewModel.swift in Sources */,
 				C051870E2AC0D00100B6FDF6 /* AuthRequest.swift in Sources */,
 				C098DCDC2AC03D940014F857 /* ChangePasswordDTO.swift in Sources */,
 				C0269A7C2AC2F3E500E315C6 /* RegistrationRequest.swift in Sources */,

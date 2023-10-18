@@ -8,7 +8,7 @@
 import Foundation
 
 struct AccountDTO: Codable {
-    let id: Int64
+    let id: Int
     let email: String
     let name: String?
     let nickname: String
@@ -20,7 +20,7 @@ struct AccountDTO: Codable {
 }
 
 struct Role: Codable {
-    let id: Int64
+    let id: Int
     let name: String
 }
 

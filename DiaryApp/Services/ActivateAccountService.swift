@@ -7,10 +7,10 @@
 
 import Foundation
 
+
 protocol ActivateAccountProtocol {
     func activateAccount(code: String) async throws -> Response<String>
 }
-
 
 class ActivateAccountService: ActivateAccountProtocol {
     
@@ -21,20 +21,19 @@ class ActivateAccountService: ActivateAccountProtocol {
     }
 
     func activateAccount(code: String) async throws -> Response<String> {
-        let (data, response) = try await client.perform(request: RegistrationRequest.activateAccount(code: code).makeRequest)
+        let (data, response) = try await client.perform(request: RegistrationRequest.activateAccount(code: code).urlRequest)
         return try ActivateAccountMapper.map(data: data, response: response)
     }
 }
 
-
 struct ActivateAccountMapper {
     static func map(data: Data, response: HTTPURLResponse) throws -> Response<String> {
         if response.statusCode == 404 {
-            throw RequestError.notFound(message: "Invalid code.")
+            throw RequestError.notFound(message: Constants.ErrorMessages.invalidCode)
         }
 
         guard response.statusCode == 200 else {
-            throw RequestError.invalidResponse(message: "Something went wrong.")
+            throw RequestError.invalidResponse(message: Constants.ErrorMessages.somethingWentWrong)
         }
 
         guard let data = try? JSONDecoder().decode(Response<String>.self, from: data) else {

@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
 
 
 @Observable
@@ -45,7 +44,8 @@ class ActivateAccountViewModel {
     func filterOnlyDigits() {
         code = code.filter { "0123456789".contains($0) }
     }
-
+    
+    @MainActor
     func activateAccount() async {
         do {
             let _ = try await service.activateAccount(code: code)

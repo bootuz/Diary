@@ -13,6 +13,7 @@ protocol TokenProvider {
     func validToken(forceRefresh: Bool) async throws -> AuthToken
     func setToken(_ token: AuthToken)
     func removeToken()
+    func getToken() -> AuthToken?
 }
 
 class TokenService: TokenProvider {
@@ -23,30 +24,31 @@ class TokenService: TokenProvider {
         self.client = client
     }
 
-
-    private let tokenKey = "TOKEN_DATA"
-
     private var currentToken: AuthToken? {
-        if let tokenData = UserDefaults.standard.value(forKey: tokenKey) as? Data {
+        if let tokenData = UserDefaults.standard.value(forKey: Constants.tokenKey) as? Data {
             return try? JSONDecoder().decode(AuthToken.self, from: tokenData)
         } else {
             return nil
         }
     }
 
+    func getToken() -> AuthToken? {
+        return self.currentToken
+    }
+
     func fetchToken(with creds: AuthCreds) async throws -> AuthToken {
-        let (data, response) = try await client.perform(request: AuthRequest.fetchToken(creds: creds).makeRequest)
+        let (data, response) = try await client.perform(request: AuthRequest.fetchToken(creds: creds).urlRequest)
         return try TokenMapper.map(data: data, response: response)
     }
 
     func refreshToken(creds: RefreshCreds) async throws -> AuthToken {
-        let (data, response) = try await client.perform(request: AuthRequest.refreshToken(refreshCreds: creds).makeRequest)
+        let (data, response) = try await client.perform(request: AuthRequest.refreshToken(refreshCreds: creds).urlRequest)
         return try TokenMapper.map(data: data, response: response)
     }
 
     func validToken(forceRefresh: Bool = false) async throws -> AuthToken {
         guard let authToken = self.currentToken else {
-            throw RequestError.unauthorizedError(message: "Unauthorized. You need to log in first.")
+            throw RequestError.unauthorizedError(message: Constants.ErrorMessages.unauthorizedYouNeedToLoginFirst)
         }
 
         if authToken.isValid(), !forceRefresh {
@@ -57,12 +59,12 @@ class TokenService: TokenProvider {
 
     func setToken(_ token: AuthToken) {
         if let dataToken = try? JSONEncoder().encode(token) {
-            UserDefaults.standard.set(dataToken, forKey: tokenKey)
+            UserDefaults.standard.set(dataToken, forKey: Constants.tokenKey)
         }
     }
 
     func removeToken() {
-        UserDefaults.standard.removeObject(forKey: tokenKey)
+        UserDefaults.standard.removeObject(forKey: Constants.tokenKey)
     }
 }
 
@@ -70,11 +72,11 @@ class TokenService: TokenProvider {
 struct TokenMapper {
     static func map(data: Data, response: HTTPURLResponse) throws -> AuthToken {
         if response.statusCode == 400 {
-            throw RequestError.wrongCredentials(message: "Invalid login or password.")
+            throw RequestError.wrongCredentials(message: Constants.ErrorMessages.invalidLoginOrPassword)
         }
 
         guard response.statusCode == 200 else {
-            throw RequestError.invalidResponse(message: "Something went wrong.")
+            throw RequestError.invalidResponse(message: Constants.ErrorMessages.somethingWentWrong)
         }
 
         guard let data = try? JSONDecoder().decode(AuthToken.self, from: data) else {

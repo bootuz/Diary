@@ -7,9 +7,17 @@
 
 import SwiftUI
 
+
 struct MainView: View {
+    private var viewModel = AppStateViewModel(service: TokenService(client: URLSession.shared))
+
     var body: some View {
-        Text("Hello world!")
+        switch viewModel.authenticationState {
+            case .undefined, .loggedOut:
+                SignInView()
+            case .loggedIn:
+                Text("Main View")
+        }
     }
 }
 
