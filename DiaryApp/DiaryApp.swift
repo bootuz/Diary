@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct DiaryAppApp: App {
+struct DiaryApp: App {
     var body: some Scene {
         WindowGroup {
             SignInView()

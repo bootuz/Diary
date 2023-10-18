@@ -39,7 +39,6 @@ extension RegistrationRequest: Request {
         switch self {
             case .createAccount, .changePassword:
                 return .post
-
             case .checkNickname, .activateAccount, .checkEmail:
                 return .get
         }
@@ -51,7 +50,7 @@ extension RegistrationRequest: Request {
                 return [
                     "Content-Type": "application/json"
                 ]
-            case .checkNickname, .activateAccount, .checkEmail:
+            default:
                 return nil
         }
     }
@@ -73,11 +72,7 @@ extension RegistrationRequest: Request {
                     "newPassword": data.newPassword,
                     "oldPassword": data.oldPassword
                 ]
-            case .checkNickname:
-                return nil
-            case .activateAccount:
-                return nil
-            case .checkEmail:
+            default:
                 return nil
         }
     }

@@ -84,9 +84,7 @@ extension AuthRequest: Request {
                 request.setValue(value, forHTTPHeaderField: key)
             })
             print("DEBUG: [\(method.rawValue)] \(url)")
-            if let query {
-                request.httpBody = urlComponents.query?.data(using: .utf8)
-            }
+            request.httpBody = urlComponents.query?.data(using: .utf8)
             return request
         }
     }

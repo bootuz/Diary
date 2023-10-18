@@ -14,11 +14,9 @@ struct ResetPasswordInitView: View {
     var body: some View {
         NavigationStack() {
             VStack {
-                VStack {
-                    Text("Reset password".uppercased())
-                        .fontWeight(.semibold)
-                        .font(.largeTitle)
-                }
+                Text("Reset password".uppercased())
+                    .fontWeight(.semibold)
+                    .font(.largeTitle)
 
                 VStack {
                     LabeledTextField(title: "Email", text: $viewModel.email) {

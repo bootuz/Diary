@@ -13,11 +13,9 @@ struct UpdatePasswordView: View {
 
     var body: some View {
         VStack {
-            VStack {
-                Text("Update password".uppercased())
-                    .fontWeight(.semibold)
-                    .font(.largeTitle)
-            }
+            Text("Update password".uppercased())
+                .fontWeight(.semibold)
+                .font(.largeTitle)
 
             VStack {
                 LabeledTextField(title: "Code from email", text: $viewModel.codeFromEmail) {

@@ -49,8 +49,6 @@ extension Request {
             header?.forEach({ key, value in
                 request.setValue(value, forHTTPHeaderField: key)
             })
-            print("DEBUG: [\(method.rawValue)] \(url)")
-
             if let body = body {
                 request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: [])
             }

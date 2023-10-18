@@ -16,7 +16,7 @@
 		C04DD4D32AC9DE6000BC6D05 /* TokenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04DD4D22AC9DE6000BC6D05 /* TokenService.swift */; };
 		C04DD4D62AC9E08000BC6D05 /* BearerAuthDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04DD4D52AC9E08000BC6D05 /* BearerAuthDecorator.swift */; };
 		C04DD4D82AC9E0AA00BC6D05 /* BasicAuthDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04DD4D72AC9E0AA00BC6D05 /* BasicAuthDecorator.swift */; };
-		C04DD4DC2AC9EF8200BC6D05 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04DD4DB2AC9EF8200BC6D05 /* CodeView.swift */; };
+		C04DD4DC2AC9EF8200BC6D05 /* ActivateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04DD4DB2AC9EF8200BC6D05 /* ActivateAccountView.swift */; };
 		C05187022AC0CAFF00B6FDF6 /* AuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05187012AC0CAFF00B6FDF6 /* AuthToken.swift */; };
 		C05187052AC0CEAC00B6FDF6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05187042AC0CEAC00B6FDF6 /* HTTPMethod.swift */; };
 		C05187072AC0CEC400B6FDF6 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05187062AC0CEC400B6FDF6 /* Request.swift */; };
@@ -26,7 +26,7 @@
 		C06516812AC472710049C3BD /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06516802AC472710049C3BD /* RegistrationView.swift */; };
 		C06516842AC475030049C3BD /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06516832AC475030049C3BD /* RegistrationViewModel.swift */; };
 		C06516892AC47AB90049C3BD /* AsuncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06516882AC47AB90049C3BD /* AsuncButton.swift */; };
-		C098DCA62AC035220014F857 /* DiaryAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C098DCA52AC035220014F857 /* DiaryAppApp.swift */; };
+		C098DCA62AC035220014F857 /* DiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C098DCA52AC035220014F857 /* DiaryApp.swift */; };
 		C098DCA82AC035220014F857 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C098DCA72AC035220014F857 /* MainView.swift */; };
 		C098DCAC2AC035230014F857 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C098DCAB2AC035230014F857 /* Assets.xcassets */; };
 		C098DCAF2AC035230014F857 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C098DCAE2AC035230014F857 /* Preview Assets.xcassets */; };
@@ -38,6 +38,8 @@
 		C098DCDA2AC03D110014F857 /* CreateAccountDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C098DCD92AC03D110014F857 /* CreateAccountDTO.swift */; };
 		C098DCDC2AC03D940014F857 /* ChangePasswordDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C098DCDB2AC03D940014F857 /* ChangePasswordDTO.swift */; };
 		C098DCDE2AC0890C0014F857 /* AccountDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C098DCDD2AC0890C0014F857 /* AccountDTO.swift */; };
+		C0F024D02ADD206D00C4CC22 /* ActivateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F024CF2ADD206D00C4CC22 /* ActivateAccountViewModel.swift */; };
+		C0F024D72ADEE68600C4CC22 /* ActivateAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F024D62ADEE68600C4CC22 /* ActivateAccountService.swift */; };
 		C0F7F34A2AD168120025C56E /* ErrorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F7F3492AD168120025C56E /* ErrorLabel.swift */; };
 		C0F7F3502AD1DDE50025C56E /* ResetPasswordInitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F7F34F2AD1DDE50025C56E /* ResetPasswordInitView.swift */; };
 		C0F7F3522AD1DE670025C56E /* ResetPasswordInitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F7F3512AD1DE670025C56E /* ResetPasswordInitViewModel.swift */; };
@@ -76,7 +78,7 @@
 		C04DD4D22AC9DE6000BC6D05 /* TokenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenService.swift; sourceTree = "<group>"; };
 		C04DD4D52AC9E08000BC6D05 /* BearerAuthDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearerAuthDecorator.swift; sourceTree = "<group>"; };
 		C04DD4D72AC9E0AA00BC6D05 /* BasicAuthDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAuthDecorator.swift; sourceTree = "<group>"; };
-		C04DD4DB2AC9EF8200BC6D05 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
+		C04DD4DB2AC9EF8200BC6D05 /* ActivateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateAccountView.swift; sourceTree = "<group>"; };
 		C05187012AC0CAFF00B6FDF6 /* AuthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthToken.swift; sourceTree = "<group>"; };
 		C05187042AC0CEAC00B6FDF6 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		C05187062AC0CEC400B6FDF6 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
@@ -87,7 +89,7 @@
 		C06516832AC475030049C3BD /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		C06516882AC47AB90049C3BD /* AsuncButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsuncButton.swift; sourceTree = "<group>"; };
 		C098DCA22AC035220014F857 /* DiaryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiaryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C098DCA52AC035220014F857 /* DiaryAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryAppApp.swift; sourceTree = "<group>"; };
+		C098DCA52AC035220014F857 /* DiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryApp.swift; sourceTree = "<group>"; };
 		C098DCA72AC035220014F857 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C098DCAB2AC035230014F857 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C098DCAE2AC035230014F857 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -101,6 +103,8 @@
 		C098DCD92AC03D110014F857 /* CreateAccountDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountDTO.swift; sourceTree = "<group>"; };
 		C098DCDB2AC03D940014F857 /* ChangePasswordDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordDTO.swift; sourceTree = "<group>"; };
 		C098DCDD2AC0890C0014F857 /* AccountDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDTO.swift; sourceTree = "<group>"; };
+		C0F024CF2ADD206D00C4CC22 /* ActivateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateAccountViewModel.swift; sourceTree = "<group>"; };
+		C0F024D62ADEE68600C4CC22 /* ActivateAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateAccountService.swift; sourceTree = "<group>"; };
 		C0F7F3492AD168120025C56E /* ErrorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLabel.swift; sourceTree = "<group>"; };
 		C0F7F34F2AD1DDE50025C56E /* ResetPasswordInitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordInitView.swift; sourceTree = "<group>"; };
 		C0F7F3512AD1DE670025C56E /* ResetPasswordInitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordInitViewModel.swift; sourceTree = "<group>"; };
@@ -177,6 +181,7 @@
 				C04DD4C72AC96ABA00BC6D05 /* SignInViewModel.swift */,
 				C0F7F3512AD1DE670025C56E /* ResetPasswordInitViewModel.swift */,
 				C0F7F3592AD1E9960025C56E /* UpdatePasswordViewModel.swift */,
+				C0F024CF2ADD206D00C4CC22 /* ActivateAccountViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -219,7 +224,7 @@
 				C098DCD22AC035980014F857 /* Models */,
 				C06516822AC474E30049C3BD /* ViewModels */,
 				C098DCD12AC0355A0014F857 /* Views */,
-				C098DCA52AC035220014F857 /* DiaryAppApp.swift */,
+				C098DCA52AC035220014F857 /* DiaryApp.swift */,
 				C098DCA72AC035220014F857 /* MainView.swift */,
 				C098DCAB2AC035230014F857 /* Assets.xcassets */,
 				C098DCAD2AC035230014F857 /* Preview Content */,
@@ -259,7 +264,7 @@
 				C06516872AC47AAA0049C3BD /* UIComponenets */,
 				C06516802AC472710049C3BD /* RegistrationView.swift */,
 				C04DD4C52AC9689500BC6D05 /* SignInView.swift */,
-				C04DD4DB2AC9EF8200BC6D05 /* CodeView.swift */,
+				C04DD4DB2AC9EF8200BC6D05 /* ActivateAccountView.swift */,
 				C0F7F34F2AD1DDE50025C56E /* ResetPasswordInitView.swift */,
 				C0F7F35B2AD1EA4A0025C56E /* UpdatePasswordView.swift */,
 			);
@@ -284,6 +289,7 @@
 				C04DD4D22AC9DE6000BC6D05 /* TokenService.swift */,
 				C0F7F3532AD1DE8F0025C56E /* ResetPasswordInitService.swift */,
 				C0F7F3572AD1E8E50025C56E /* UpdatePasswordService.swift */,
+				C0F024D62ADEE68600C4CC22 /* ActivateAccountService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -440,6 +446,7 @@
 				C04DD4D82AC9E0AA00BC6D05 /* BasicAuthDecorator.swift in Sources */,
 				C0F7F3582AD1E8E50025C56E /* UpdatePasswordService.swift in Sources */,
 				C098DCD52AC03B110014F857 /* RegistrationService.swift in Sources */,
+				C0F024D02ADD206D00C4CC22 /* ActivateAccountViewModel.swift in Sources */,
 				C06516842AC475030049C3BD /* RegistrationViewModel.swift in Sources */,
 				C098DCDA2AC03D110014F857 /* CreateAccountDTO.swift in Sources */,
 				C051870B2AC0CF3F00B6FDF6 /* HTTPClient.swift in Sources */,
@@ -451,7 +458,7 @@
 				C04DD4C82AC96ABA00BC6D05 /* SignInViewModel.swift in Sources */,
 				C0F7F3542AD1DE8F0025C56E /* ResetPasswordInitService.swift in Sources */,
 				C06516812AC472710049C3BD /* RegistrationView.swift in Sources */,
-				C098DCA62AC035220014F857 /* DiaryAppApp.swift in Sources */,
+				C098DCA62AC035220014F857 /* DiaryApp.swift in Sources */,
 				C04DD4D62AC9E08000BC6D05 /* BearerAuthDecorator.swift in Sources */,
 				C0F7F35C2AD1EA4A0025C56E /* UpdatePasswordView.swift in Sources */,
 				C051870E2AC0D00100B6FDF6 /* AuthRequest.swift in Sources */,
@@ -459,6 +466,7 @@
 				C0269A7C2AC2F3E500E315C6 /* RegistrationRequest.swift in Sources */,
 				C04DD4D12AC9DCB200BC6D05 /* ResponseMapper.swift in Sources */,
 				C04DD4D32AC9DE6000BC6D05 /* TokenService.swift in Sources */,
+				C0F024D72ADEE68600C4CC22 /* ActivateAccountService.swift in Sources */,
 				C0F7F3562AD1DF290025C56E /* ResetPasswordRequest.swift in Sources */,
 				C05187092AC0CF0100B6FDF6 /* RequestError.swift in Sources */,
 				C04DD4C62AC9689500BC6D05 /* SignInView.swift in Sources */,
@@ -470,7 +478,7 @@
 				C01758B52AC6034D00342159 /* LabeledTextField.swift in Sources */,
 				C098DCDE2AC0890C0014F857 /* AccountDTO.swift in Sources */,
 				C0F7F3502AD1DDE50025C56E /* ResetPasswordInitView.swift in Sources */,
-				C04DD4DC2AC9EF8200BC6D05 /* CodeView.swift in Sources */,
+				C04DD4DC2AC9EF8200BC6D05 /* ActivateAccountView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

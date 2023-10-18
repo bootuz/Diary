@@ -15,11 +15,9 @@ struct SignInView: View {
     var body: some View {
         NavigationStack() {
             VStack {
-                VStack {
-                    Text("Sign In".uppercased())
-                        .fontWeight(.semibold)
-                        .font(.largeTitle)
-                }
+                Text("Sign In".uppercased())
+                    .fontWeight(.semibold)
+                    .font(.largeTitle)
 
                 VStack {
                     LabeledTextField(title: "Email", text: $viewModel.email) {

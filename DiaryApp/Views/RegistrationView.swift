@@ -67,7 +67,7 @@ struct RegistrationView: View {
                     .frame(maxWidth: .infinity, maxHeight: 40)
             }, isPerformingTask: $viewModel.isPerformingRequest)
             .navigationDestination(isPresented: $showCodeView) {
-                CodeView()
+                ActivateAccountView()
             }
             .buttonStyle(.borderedProminent)
             .padding(.top)

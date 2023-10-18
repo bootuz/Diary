@@ -15,6 +15,7 @@ protocol HTTPClient {
 extension URLSession: HTTPClient {
 
     func perform(request: URLRequest) async throws -> (Data, HTTPURLResponse) {
+        print("DEBUG: [\(request.httpMethod)] \(request.url)")
         let (data, response) = try await URLSession.shared.data(for: request)
         guard let httpResponse = response as? HTTPURLResponse else {
             throw RequestError.invalidResponse(message: "Something went wrong")
