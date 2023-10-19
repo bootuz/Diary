@@ -15,28 +15,9 @@ enum AuthenticationState {
 
 @Observable
 class AppStateViewModel {
-    var authenticationState: AuthenticationState = .undefined
     private var service: TokenProvider
 
     init(service: TokenProvider) {
         self.service = service
-        checkTokenValidity()
     }
-
-    func checkTokenValidity() {
-        guard let token = service.getToken() else {
-            authenticationState = .loggedOut
-            return
-        }
-
-        if token.isValid() {
-            authenticationState = .loggedIn
-        }
-    }
-
-    func logout() {
-        service.removeToken()
-        authenticationState = .loggedOut
-    }
-
 }

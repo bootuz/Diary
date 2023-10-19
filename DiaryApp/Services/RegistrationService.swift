@@ -7,13 +7,11 @@
 
 import Foundation
 
-
 protocol RegistrationProtocol {
     func createAccount(data: CreateAccountDTO) async throws -> Response<AccountDTO>
     func checkNickname(nickName: String) async throws -> Response<Bool>
     func checkEmail(email: String) async throws -> Response<Bool>
 }
-
 
 class RegistrationService: RegistrationProtocol {
 

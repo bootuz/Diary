@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class BasicAuthDecorator: HTTPClient {
     let client: HTTPClient
 

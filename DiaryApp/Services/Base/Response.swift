@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct Response<T: Decodable>: Decodable {
     let message: String?
     let body: T?

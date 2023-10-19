@@ -7,18 +7,16 @@
 
 import Foundation
 
-
 protocol Validator {
     var email: String { get set }
     func validateEmail() -> Bool
     func validateForms() -> Bool
 }
 
-
 extension Validator {
     func validateEmail() -> Bool {
         let regExMatchEmail = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let predicateEmail = NSPredicate(format:"SELF MATCHES %@", regExMatchEmail)
+        let predicateEmail = NSPredicate(format: "SELF MATCHES %@", regExMatchEmail)
         return predicateEmail.evaluate(with: email)
     }
 }

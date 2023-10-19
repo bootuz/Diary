@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 enum RegistrationRequest {
     case createAccount(data: CreateAccountDTO)
     case changePassword(data: ChangePasswordDTO)
@@ -43,7 +42,7 @@ extension RegistrationRequest: Request {
         }
     }
     
-    var header: [String : String]? {
+    var header: [String: String]? {
         switch self {
             case .createAccount, .changePassword:
                 return [
@@ -54,7 +53,7 @@ extension RegistrationRequest: Request {
         }
     }
     
-    var body: [String : String]? {
+    var body: [String: String]? {
         switch self {
             case .createAccount(let data):
                 return [

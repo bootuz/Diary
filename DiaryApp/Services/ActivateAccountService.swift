@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 protocol ActivateAccountProtocol {
     func activateAccount(code: String) async throws -> Response<String>
 }
@@ -43,4 +42,3 @@ struct ActivateAccountMapper {
 
     }
 }
-

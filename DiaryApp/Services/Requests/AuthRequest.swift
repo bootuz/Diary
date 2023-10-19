@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 enum AuthRequest {
     case fetchToken(creds: AuthCreds)
     case refreshToken(refreshCreds: RefreshCreds)
@@ -23,13 +22,13 @@ extension AuthRequest: Request {
         return .post
     }
     
-    var header: [String : String]? {
+    var header: [String: String]? {
         return [
             "Content-Type": "application/x-www-form-urlencoded"
         ]
     }
     
-    var body: [String : String]? {
+    var body: [String: String]? {
         switch self {
         case .fetchToken(let creds):
             return [

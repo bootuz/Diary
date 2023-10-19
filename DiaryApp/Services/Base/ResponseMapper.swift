@@ -7,9 +7,8 @@
 
 import Foundation
 
-
 struct ResponseMapper {
-    static func map<T>(data: Data, response: HTTPURLResponse) throws -> Response<T> where T : Decodable {
+    static func map<T>(data: Data, response: HTTPURLResponse) throws -> Response<T> where T: Decodable {
         guard response.statusCode == 200 else {
             throw RequestError.invalidResponse(message: Constants.ErrorMessages.invalidResponse)
         }

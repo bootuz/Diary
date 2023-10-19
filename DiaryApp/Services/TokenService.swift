@@ -68,7 +68,6 @@ class TokenService: TokenProvider {
     }
 }
 
-
 struct TokenMapper {
     static func map(data: Data, response: HTTPURLResponse) throws -> AuthToken {
         if response.statusCode == 400 {

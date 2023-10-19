@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 enum RequestError: Error {
     case decodeError
     case notFound(message: String)
@@ -18,7 +17,6 @@ enum RequestError: Error {
     case unexpectedStatusCodeError(statusCode: Int)
     case unknownError
 }
-
 
 extension RequestError: LocalizedError {
     

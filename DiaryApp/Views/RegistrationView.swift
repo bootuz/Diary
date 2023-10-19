@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct RegistrationView: View {
     @State private var viewModel = RegistrationViewModel(service: RegistrationService(client: URLSession.shared))
     @State private var showErrorMessage: Bool = false

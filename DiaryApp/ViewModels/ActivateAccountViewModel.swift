@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 @Observable
 class ActivateAccountViewModel {
     var code: String = ""

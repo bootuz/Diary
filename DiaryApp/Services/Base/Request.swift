@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 protocol Request {
     var scheme: String { get }
     var host: String { get }

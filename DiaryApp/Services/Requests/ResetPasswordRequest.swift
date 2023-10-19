@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 enum ResetPasswordRequest {
     case resetPasswordInit(email: String)
     case resetPassword(data: UpdatePasswordDTO)
@@ -32,11 +31,11 @@ extension ResetPasswordRequest: Request {
         }
     }
     
-    var header: [String : String]? {
+    var header: [String: String]? {
         return nil
     }
     
-    var body: [String : String]? {
+    var body: [String: String]? {
         switch self {
         case .resetPasswordInit:
             return nil

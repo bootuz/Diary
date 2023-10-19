@@ -25,7 +25,6 @@ class UpdatePasswordService: UpdatePasswordProtocol {
     }
 }
 
-
 struct ResetPasswordMapper {
     static func map(data: Data, response: HTTPURLResponse) throws -> Response<String> {
         

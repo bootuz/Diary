@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 @Observable
 class SignInViewModel: Validator {
 
@@ -22,7 +21,6 @@ class SignInViewModel: Validator {
     init(service: TokenProvider) {
         self.service = service
     }
-
 
     func validateForms() -> Bool {
         guard !email.isEmpty,

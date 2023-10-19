@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C014C4B12AE1591000111023 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C014C4B02AE1591000111023 /* .swiftlint.yml */; };
 		C01758B52AC6034D00342159 /* LabeledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01758B42AC6034D00342159 /* LabeledTextField.swift */; };
 		C0269A7C2AC2F3E500E315C6 /* RegistrationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0269A7B2AC2F3E500E315C6 /* RegistrationRequest.swift */; };
 		C0481DB12AE013A90024435B /* AppStateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0481DB02AE013A90024435B /* AppStateViewModel.swift */; };
@@ -71,6 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C014C4B02AE1591000111023 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C01758B42AC6034D00342159 /* LabeledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledTextField.swift; sourceTree = "<group>"; };
 		C0269A7B2AC2F3E500E315C6 /* RegistrationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRequest.swift; sourceTree = "<group>"; };
 		C0481DB02AE013A90024435B /* AppStateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateViewModel.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 		C098DC992AC035220014F857 = {
 			isa = PBXGroup;
 			children = (
+				C014C4B02AE1591000111023 /* .swiftlint.yml */,
 				C0F7F35D2AD2D4EF0025C56E /* .gitignore */,
 				C098DCA42AC035220014F857 /* DiaryApp */,
 				C098DCB72AC035230014F857 /* DiaryAppTests */,
@@ -249,7 +252,6 @@
 		C098DCB72AC035230014F857 /* DiaryAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				C0F024CC2AD2F62C00C4CC22 /* TestData */,
 				C098DCB82AC035230014F857 /* DiaryAppTests.swift */,
 			);
 			path = DiaryAppTests;
@@ -311,13 +313,6 @@
 			path = Registration;
 			sourceTree = "<group>";
 		};
-		C0F024CC2AD2F62C00C4CC22 /* TestData */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TestData;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -328,6 +323,7 @@
 				C098DC9E2AC035220014F857 /* Sources */,
 				C098DC9F2AC035220014F857 /* Frameworks */,
 				C098DCA02AC035220014F857 /* Resources */,
+				C014C4B22AE1595300111023 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -422,6 +418,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C014C4B12AE1591000111023 /* .swiftlint.yml in Resources */,
 				C098DCAF2AC035230014F857 /* Preview Assets.xcassets in Resources */,
 				C0F7F35E2AD2D4EF0025C56E /* .gitignore in Resources */,
 				C098DCAC2AC035230014F857 /* Assets.xcassets in Resources */,
@@ -443,6 +440,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C014C4B22AE1595300111023 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C098DC9E2AC035220014F857 /* Sources */ = {
@@ -560,7 +577,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -623,7 +640,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

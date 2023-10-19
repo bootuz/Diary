@@ -8,7 +8,6 @@
 import SwiftUI
 import Combine
 
-
 struct ActivateAccountView: View {
     @State private var viewModel = ActivateAccountViewModel(service: ActivateAccountService(client: URLSession.shared))
     @FocusState private var focusedField: Bool?

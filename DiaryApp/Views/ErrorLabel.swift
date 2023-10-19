@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct ErrorLabel: View {
     var message: String
     var body: some View {

@@ -25,7 +25,6 @@ class ResetPasswordInitService: ResetPasswordInitProtocol {
     }
 }
 
-
 struct ResetPasswordInitMapper {
     static func map(data: Data, response: HTTPURLResponse) throws -> Response<String> {
         if response.statusCode == 404 {
