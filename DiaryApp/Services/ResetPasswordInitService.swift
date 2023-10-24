@@ -36,7 +36,7 @@ struct ResetPasswordInitMapper {
         }
 
         guard let data = try? JSONDecoder().decode(Response<String>.self, from: data) else {
-            throw RequestError.decodeError
+            throw RequestError.decodeError(message: "failed to decode response")
         }
         return data
     }

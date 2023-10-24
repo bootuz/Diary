@@ -15,14 +15,9 @@ struct RegistrationView: View {
 
     var body: some View {
         VStack {
-            VStack {
-                Text("Sign up".uppercased())
-                    .fontWeight(.semibold)
-                .font(.largeTitle)
-//                Text("Start writing your stories")
-//                    .font(.system(size: 20, weight: .regular, design: .rounded))
-//                    .foregroundStyle(.secondary)
-            }
+            Text("Sign up".uppercased())
+                .fontWeight(.semibold)
+            .font(.largeTitle)
 
             VStack {
                 LabeledTextField(title: "Login", text: $viewModel.nickname) {

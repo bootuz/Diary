@@ -24,12 +24,12 @@ struct AuthToken: Codable {
         case jti
     }
 
-    private func isTokenDateExpired(timeInterval: Int) -> Bool {
-        let expiringDate = Date(timeIntervalSince1970: TimeInterval(timeInterval))
+    private func isTokenDateExpired() -> Bool {
+        let expiringDate = Date().addingTimeInterval(Double(expiresIn))
         return Date() > expiringDate
     }
 
     func isValid() -> Bool {
-        return !isTokenDateExpired(timeInterval: expiresIn)
+        return !isTokenDateExpired()
     }
 }

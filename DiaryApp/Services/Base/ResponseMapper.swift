@@ -14,7 +14,7 @@ struct ResponseMapper {
         }
 
         guard let data = try? JSONDecoder().decode(Response<T>.self, from: data) else {
-            throw RequestError.decodeError
+            throw RequestError.decodeError(message: "failed to decode response")
         }
         return data
     }

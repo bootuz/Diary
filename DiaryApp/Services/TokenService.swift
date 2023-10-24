@@ -48,13 +48,25 @@ class TokenService: TokenProvider {
 
     func validToken(forceRefresh: Bool = false) async throws -> AuthToken {
         guard let authToken = self.currentToken else {
+            removeToken()
+            AppManager.Authenticated.send(false)
             throw RequestError.unauthorizedError(message: Constants.ErrorMessages.unauthorizedYouNeedToLoginFirst)
         }
 
-        if authToken.isValid(), !forceRefresh {
+        if authToken.isValid() && !forceRefresh {
             return authToken
         }
-        return try await refreshToken(creds: RefreshCreds(grantType: "refresh_token", token: authToken.refreshToken))
+
+        do {
+            let newAuthToken = try await refreshToken(creds: RefreshCreds(grantType: "refresh_token", token: authToken.refreshToken))
+            setToken(newAuthToken)
+            AppManager.Authenticated.send(true)
+            return newAuthToken
+        } catch {
+            removeToken()
+            AppManager.Authenticated.send(false)
+            throw RequestError.unauthorizedError(message: error.localizedDescription)
+        }
     }
 
     func setToken(_ token: AuthToken) {
@@ -79,7 +91,7 @@ struct TokenMapper {
         }
 
         guard let data = try? JSONDecoder().decode(AuthToken.self, from: data) else {
-            throw RequestError.decodeError
+            throw RequestError.decodeError(message: "failed to decode response")
         }
         return data
     }

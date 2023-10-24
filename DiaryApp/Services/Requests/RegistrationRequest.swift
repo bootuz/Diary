@@ -20,15 +20,15 @@ extension RegistrationRequest: Request {
     var path: String {
         switch self {
             case .createAccount:
-                return "\(Constants.basePath)/open/create"
+                return "\(Constants.basePath)/sign-up/open/create"
             case .changePassword:
-                return "\(Constants.basePath)/changePassword"
+                return "\(Constants.basePath)/sign-up/changePassword"
             case .checkNickname:
-                return "\(Constants.basePath)/open/checkNickname"
+                return "\(Constants.basePath)/sign-up/open/checkNickname"
             case .activateAccount(let code):
-                return "\(Constants.basePath)/open/activate/\(code)"
+                return "\(Constants.basePath)/sign-up/open/activate/\(code)"
             case .checkEmail:
-                return "\(Constants.basePath)/open/checkEmail"
+                return "\(Constants.basePath)/sign-up/open/checkEmail"
 
         }
     }
@@ -36,9 +36,9 @@ extension RegistrationRequest: Request {
     var method: HTTPMethod {
         switch self {
             case .createAccount, .changePassword:
-                return .post
+                return .POST
             case .checkNickname, .activateAccount, .checkEmail:
-                return .get
+                return .GET
         }
     }
     
@@ -53,23 +53,12 @@ extension RegistrationRequest: Request {
         }
     }
     
-    var body: [String: String]? {
+    var body: [String: Any]? {
         switch self {
             case .createAccount(let data):
-                return [
-                    "email": data.email,
-                    "nickname": data.nickname,
-                    "password": data.password,
-                    "about": data.about ?? "",
-                    "birthdate": data.birthdate ?? Date().ISO8601Format(),
-                    "name": data.name ?? ""
-                ]
+                return data.toDictionary()
             case .changePassword(let data):
-                return [
-                    "accountId": "\(data.accountId)",
-                    "newPassword": data.newPassword,
-                    "oldPassword": data.oldPassword
-                ]
+                return data.toDictionary()
             default:
                 return nil
         }

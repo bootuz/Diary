@@ -6,18 +6,17 @@
 //
 
 import Foundation
+import Combine
 
-// TODO: - WIP the logic is not complete and needs to be reworked.
+struct AppManager {
+    static let Authenticated = PassthroughSubject<Bool, Never>()
+    
+    static func IsAuthenticated() -> Bool {
+        return UserDefaults.standard.value(forKey: Constants.tokenKey) != nil
+    }
 
-enum AuthenticationState {
-    case undefined, loggedIn, loggedOut
-}
-
-@Observable
-class AppStateViewModel {
-    private var service: TokenProvider
-
-    init(service: TokenProvider) {
-        self.service = service
+    static func logout() {
+        UserDefaults.standard.removeObject(forKey: Constants.tokenKey)
+        AppManager.Authenticated.send(false)
     }
 }

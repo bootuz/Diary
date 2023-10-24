@@ -42,6 +42,7 @@ class SignInViewModel: Validator {
         do {
             let response = try await service.fetchToken(with: AuthCreds(username: username, password: password))
             service.setToken(response)
+            AppManager.Authenticated.send(true)
         } catch {
             errorMessage = error.localizedDescription
             showErrorMessage = true

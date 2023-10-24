@@ -19,7 +19,7 @@ extension AuthRequest: Request {
     }
 
     var method: HTTPMethod {
-        return .post
+        return .POST
     }
     
     var header: [String: String]? {
@@ -28,20 +28,12 @@ extension AuthRequest: Request {
         ]
     }
     
-    var body: [String: String]? {
+    var body: [String: Any]? {
         switch self {
-        case .fetchToken(let creds):
-            return [
-                "username": creds.username,
-                "password": creds.password,
-                "grant_type": creds.grantType,
-                "authType": creds.authType
-            ]
-        case .refreshToken(let refreshCreds):
-            return [
-                "grant_type": refreshCreds.grantType,
-                "token": refreshCreds.token
-            ]
+            case .fetchToken(let creds):
+                return creds.toDictionary()
+            case .refreshToken(let refreshCreds):
+                return refreshCreds.toDictionary()
         }
     }
 
@@ -87,12 +79,12 @@ extension AuthRequest: Request {
     }
 }
 
-struct RefreshCreds: Codable {
+struct RefreshCreds: Codable, DictionaryConvertor {
     let grantType: String
     let token: String
 }
 
-struct AuthCreds: Codable {
+struct AuthCreds: Codable, DictionaryConvertor {
     let username: String
     let password: String
     var grantType: String = "password"

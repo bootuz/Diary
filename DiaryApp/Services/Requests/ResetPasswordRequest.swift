@@ -16,18 +16,18 @@ extension ResetPasswordRequest: Request {
     var path: String {
         switch self {
         case .resetPasswordInit:
-            return "\(Constants.basePath)/open/reset-password/init"
+            return "\(Constants.basePath)/sign-up/open/reset-password/init"
         case .resetPassword:
-            return "\(Constants.basePath)/open/reset-password"
+            return "\(Constants.basePath)/sign-up/open/reset-password"
         }
     }
     
     var method: HTTPMethod {
         switch self {
-        case .resetPasswordInit:
-            return .get
-        case .resetPassword:
-            return .post
+            case .resetPasswordInit:
+                return .GET
+            case .resetPassword:
+                return .POST
         }
     }
     
@@ -35,24 +35,21 @@ extension ResetPasswordRequest: Request {
         return nil
     }
     
-    var body: [String: String]? {
+    var body: [String: Any]? {
         switch self {
-        case .resetPasswordInit:
-            return nil
-        case .resetPassword(let data):
-            return [
-                "codeFromEmail": data.codeFromEmail,
-                "newPassword": data.newPassword
-            ]
+            case .resetPasswordInit:
+                return nil
+            case .resetPassword(let data):
+                return data.toDictionary()
         }
     }
     
     var query: [URLQueryItem]? {
         switch self {
-        case .resetPasswordInit(let email):
-            return [URLQueryItem(name: "email", value: email)]
-        case .resetPassword:
-            return nil
+            case .resetPasswordInit(let email):
+                return [URLQueryItem(name: "email", value: email)]
+            case .resetPassword:
+                return nil
         }
     }
 }

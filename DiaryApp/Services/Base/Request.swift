@@ -13,7 +13,7 @@ protocol Request {
     var path: String { get }
     var method: HTTPMethod { get }
     var header: [String: String]? { get }
-    var body: [String: String]? { get }
+    var body: [String: Any]? { get }
     var query: [URLQueryItem]? { get }
     var urlRequest: URLRequest { get throws }
 }

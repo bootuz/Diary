@@ -8,7 +8,7 @@
 import Foundation
 
 enum RequestError: Error {
-    case decodeError
+    case decodeError(message: String)
     case notFound(message: String)
     case invalidURL
     case invalidResponse(message: String)
@@ -22,8 +22,8 @@ extension RequestError: LocalizedError {
     
     var errorDescription: String? {
         switch self {
-            case .decodeError:
-                return ""
+            case .decodeError(let message):
+                return message
             case .invalidURL:
                 return ""
             case .invalidResponse(let message):

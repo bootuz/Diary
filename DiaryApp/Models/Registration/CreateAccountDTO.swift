@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CreateAccountDTO: Codable {
+struct CreateAccountDTO: Codable, DictionaryConvertor {
     let email: String
     let nickname: String
     let password: String
